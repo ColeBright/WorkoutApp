@@ -1,0 +1,28 @@
+<div class="container">
+    <p>Workout Date</p>
+    <div *ngFor="let workout of workouts">
+    {{workout.date}}
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>Exercise </th>
+        <th>Muscle</th>
+        <th>Weight</th>
+        <th>Reps</th>
+      </tr>
+      <tr *ngFor="let exercise of workout.exercises">
+        <td>
+          {{exercise.name}}
+        </td>
+        <td>
+          {{exercise.muscle}}
+        </td>
+        <td>
+          {{exercise.weight}}
+        </td>
+        <td>
+          {{exercise.reps}}
+        </td>
+      </tr>
+    </table>
+    </div>
+  </div>

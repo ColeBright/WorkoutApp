@@ -1,0 +1,35 @@
+<div class="container">
+    <form [formGroup]="workoutform" (ngSubmit)="submitRegistration()" novalidate>
+      <div *ngIf="validMessage != ''">
+        <h3 class="has-info">{{validMessage}}</h3>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="text" class="form-control" formControlName="date" required autofocus/>
+      </div>
+      <div class="form-group">
+        <label>Exercise Name</label>
+        <input type="text" class="form-control" formControlName="name" required/>
+      </div>
+      <div class="form-group">
+        <label>Muscle Affected</label>
+        <select class="form-control" formControlName="muscle" required>
+          <option value="">Please select a muscle group</option>
+          <option *ngFor="let m of muscles"
+                  [value]="m">
+                  {{m}}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Weight</label>
+        <input type="text" class="form-control" formControlName="weight" required/>
+      </div>
+      <div class="form-group">
+        <label>Repetitions</label>
+        <input type="text" class="form-control" formControlName="reps" required/>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+  </div>

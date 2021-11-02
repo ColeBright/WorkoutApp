@@ -1,0 +1,6 @@
+package com.muscledata.workout.models;
+
+public enum Muscle {
+	CHEST, BACK, ABS, QUADS, HAMSTRINGS, ADDUCTORS, ABDUCTORS, REARDELTS, FRONTDELTS, LATERALDELTS, BICEPS, TRICEPS, CALVES
+}
+
